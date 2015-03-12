@@ -1,8 +1,10 @@
 FROM nginx:1.7
-MAINTAINER Innersource
+MAINTAINER Iván Corrales Solera <developer@wesovi.com>
 
 ENV KIBANA_PKG  kibana-4.0.0-linux-x64
 ENV KIBANA_HOME /opt/kibana
+
+#Download kibana
 
 ADD https://download.elasticsearch.org/kibana/kibana/$KIBANA_PKG.tar.gz /tmp/kibana.tar.gz
 ADD bin/run.sh /usr/local/bin/run
