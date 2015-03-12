@@ -22,4 +22,4 @@ EXPOSE 5601
 
 WORKDIR $KIBANA_HOME
 
-#CMD /opt/kibana/bin/kibana
+CMD /opt/kibana/bin/kibana

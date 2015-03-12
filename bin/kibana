@@ -16,5 +16,5 @@ done
 DIR=$(dirname "${SCRIPT}")/..
 NODE=${DIR}/node/bin/node
 SERVER=${DIR}/src/bin/kibana.js
-ES_HOST="${ES_PORT_9200_TCP_ADDR}"
+ES_HOST="${ELASTICSEARCH_9200_SERVICE_HOST}"
 CONFIG_PATH="${DIR}/config/kibana.yml" NODE_ENV="production" exec "${NODE}" ${SERVER} ${@} --elasticsearch "http://${ES_HOST}:9200"
