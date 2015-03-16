@@ -15,6 +15,7 @@ RUN tar -xvzf /tmp/kibana.tar.gz && mv $KIBANA_PKG/* /opt/kibana
 
 COPY config/kibana.yml /opt/kibana/config/kibana.yml
 COPY bin/run.sh /usr/local/bin/run
+COPY patch/refresh_intervals.js /opt/kibana/src/components/timepicker/refresh_intervals.js
 RUN chmod +x /usr/local/bin/run
 COPY bin/kibana /opt/kibana/bin/kibana
 RUN chmod +x /opt/kibana/bin/kibana
